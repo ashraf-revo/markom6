@@ -1,0 +1,12 @@
+---
+applications:
+- name: Markom
+  memory: 1G
+  instances: 1
+  host: Markom-${random-word}
+  buildpack: java_buildpack
+  path: target/markom-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: mysql,mongoonline,memory
+  services:
+  - MysqlDbMarkom1

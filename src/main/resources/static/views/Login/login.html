@@ -1,0 +1,9 @@
+<a ui-sref="home">home</a>
+<form>
+    <input type="text" ng-model="user.username">
+    <input type="text" ng-model="user.password">
+    <button type="button" ng-click="login()"
+            ng-disabled="!user.username || user.username==='' ||!user.password || user.password  === ''">
+        Login
+    </button>
+</form>

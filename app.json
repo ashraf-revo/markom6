@@ -1,0 +1,7 @@
+{
+  "name": "Markom",
+  "description": "This Is A Markom Application On Markom.",
+  "repository": "https://github.com/ashraf-revo/Markom",
+  "image": "heroku/java",
+  "addons": [ "heroku-postgresql" ]
+}
