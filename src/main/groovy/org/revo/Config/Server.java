@@ -37,13 +37,14 @@ public class Server extends AuthorizationServerConfigurerAdapter {
     @Autowired
     Environment environment;
 
-//    @Bean
-//    @Profile("memory")
-//    public TokenStore tokenStore1() {
-//        return new InMemoryTokenStore();
-//    }
     @Bean
-//    @Profile("jdbc")
+    @Profile("memory")
+    public TokenStore tokenStore1() {
+        return new InMemoryTokenStore();
+    }
+
+    @Bean
+    @Profile("jdbc")
     public TokenStore tokenStore2() {
         return new JdbcTokenStore(dataSource);
     }
