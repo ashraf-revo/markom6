@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar --spring.profiles.active=postgresql,mongoonline,jdbc
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar --spring.profiles.active=postgresql,mongoonline

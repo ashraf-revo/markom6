@@ -7,6 +7,6 @@ applications:
   buildpack: java_buildpack
   path: target/markom-0.0.1-SNAPSHOT.jar
   env:
-    SPRING_PROFILES_ACTIVE: mysql,mongoonline,memory
+    SPRING_PROFILES_ACTIVE: mysql,mongoonline
   services:
   - MysqlDbMarkom1
