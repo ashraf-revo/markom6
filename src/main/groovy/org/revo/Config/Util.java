@@ -14,6 +14,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import javax.validation.Validator;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ashraf on 30/08/16.
@@ -22,6 +24,11 @@ import javax.validation.Validator;
 public class Util {
     @Autowired
     UserService userService;
+
+    @Bean
+    Map<String, Boolean> onlineUsers() {
+        return new HashMap<>();
+    }
 
     @Bean
     public Validator validator() {
