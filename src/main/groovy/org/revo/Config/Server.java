@@ -36,7 +36,7 @@ public class Server extends AuthorizationServerConfigurerAdapter {
     Environment environment;
 
     @Bean
-    public TokenStore tokenStore2() {
+    public TokenStore tokenStore() {
         return new JdbcTokenStore(dataSource);
     }
 
