@@ -20,6 +20,8 @@ public class MyChannelInterception extends ChannelInterceptorAdapter {
     @Override
     public Message<?> preSend(Message<?> message, MessageChannel channel) {
         SimpMessageHeaderAccessor wrap = SimpMessageHeaderAccessor.wrap(message);
+        wrap.getMessageHeaders().values().forEach(System.out::println);
+
         if (wrap.getMessageType() == SimpMessageType.CONNECT_ACK || wrap.getMessageType() == SimpMessageType.CONNECT)
             onlineUsers.put(wrap.getUser().getName(), true);
         if (wrap.getMessageType() == SimpMessageType.DISCONNECT_ACK || wrap.getMessageType() == SimpMessageType.DISCONNECT)
